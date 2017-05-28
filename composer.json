@@ -2,15 +2,12 @@
     "name": "fufu70/curl-class",
     "type": "library",
     "license": "MIT",
-    "repositories": [
-    	{ 
-	      "type": "vcs",
-	      "url": "https://github.com/fufu70/ReflectionClass.git"
-	    }
-    ],
     "require": {
-        "php": ">=5.1.0",
-        "yiisoft/yii": "1.1.*",
-        "fufu70/reflection-class": "dev-master"
+        "php": ">=5.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Common\\": "src/"
+        }
     }
 }

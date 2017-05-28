@@ -6,7 +6,7 @@ This allows for a reusable templating structure that can accomodate most general
 
 ## Usage
 
-To include the CurlClass in your composer file add the repo directory into your repositories section in the composer file and add the name of the module into the require section of the composer file. Also include the [ReflectionClass](https://github.com/fufu70/ReflectionClass).
+To include the CurlClass in your composer file add the repo directory into your repositories section in the composer file and add the name of the module into the require section of the composer file.
 
 ```
 "repositories": {
@@ -14,10 +14,6 @@ To include the CurlClass in your composer file add the repo directory into your 
     { 
       "type": "vcs", 
       "url": "https://github.com/fufu70/CurlClass.git"
-    },
-    { 
-      "type": "vcs",
-      "url": "https://github.com/fufu70/ReflectionClass.git"
     }
     ...
 }
@@ -27,7 +23,6 @@ To include the CurlClass in your composer file add the repo directory into your 
 "require": {
     ...
     "fufu70/curl-class": "dev-master",
-    "fufu70/reflection-class": "dev-master"
     ...
 }
 ```
