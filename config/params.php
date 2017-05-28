@@ -4,7 +4,7 @@
 
 return array(
 	// this is displayed in the header section
-	'title' => 'SendGrid-LightWeight-PHP-API',
+	'title' => 'Curl-Class',
 
 	// the login duration when a user selects 'remember me'
 	'loginDuration' => 3600 * 24 * 30, // 30 days
@@ -18,11 +18,4 @@ return array(
 	// The date format used by the database
 	'dbDateFormat' => 'Y-m-d H:i:s',
 
-	'send_grid' => [
-		'username'    => 'My_SendGrid_Username',
-		'password' 	  => 'My_SendGrid_Password',
-		'template_id' => 'My_SendGrid_TemplateId',
-		'name'	      => 'My_SendGrid_Name',
-		'key' 	      => 'My_SendGrid_Key'
-	]
 );
