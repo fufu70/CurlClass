@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="CommonPHP" tests="2" assertions="2" failures="0" errors="0" time="0.928185">
+    <testsuite name="Common\Test\CurlTest" file="/Users/Fuzzy/milf/CurlClass/tests/Curl.php" tests="2" assertions="2" failures="0" errors="0" time="0.928185">
+      <testsuite name="Common\Test\CurlTest::test_post" tests="1" assertions="1" failures="0" errors="0" time="0.450188">
+        <testcase name="test_post with data set #0" assertions="1" time="0.450188"/>
+      </testsuite>
+      <testsuite name="Common\Test\CurlTest::test_get" tests="1" assertions="1" failures="0" errors="0" time="0.477997">
+        <testcase name="test_get with data set #0" assertions="1" time="0.477997"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
