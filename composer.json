@@ -4,7 +4,7 @@
     "license": "MIT",
     "repositories": [
     	{ 
-	      "type": "vcs", 
+	      "type": "vcs",
 	      "url": "https://github.com/fufu70/ReflectionClass.git"
 	    }
     ],
