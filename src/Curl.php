@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Contains the Curl class. Utilized by the SendGrid class.
+ * Contains the Curl class.
  *
  * @package Common
  * @author  Christian Micklisch <christian.micklisch@successwithsos.com>

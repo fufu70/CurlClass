@@ -1,25 +1,19 @@
-# SendGrid-LightWeight-PHP-API
+# CurlClass
 
-SendGrid API for interfacing with [custom templates](https://sendgrid.com/docs/User_Guide/Transactional_Templates/create_edit.html) created inside of sendgrid.
-The assumption of this API is that you created a simple Template containing:
-
-* text
-* button_text
-* button_link
-* preheader-text
+A simplification of the curl commands 
 
 This allows for a reusable templating structure that can accomodate most general needs.
 
 ## Usage
 
-To include the SendGrid-LightWeight-PHP-API in your composer file add the repo directory into your repositories section in the composer file and add the name of the module into the require section of the composer file.
+To include the CurlClass in your composer file add the repo directory into your repositories section in the composer file and add the name of the module into the require section of the composer file.
 
 ```
 "repositories": {
     ...
     { 
       "type": "vcs", 
-      "url": "https://github.com/fufu70/SendGrid-LightWeight-PHP-API.git"
+      "url": "https://github.com/fufu70/CurlClass.git"
     }
     ...
 }
@@ -28,26 +22,42 @@ To include the SendGrid-LightWeight-PHP-API in your composer file add the repo d
 
 "require": {
     ...
-    "fufu70/sendgrid-lightweight-php-api": "dev-master",
+    "fufu70/curl-class": "dev-master",
     ...
 }
 ```
 
-Add in your Sendgrid specific parameters inside of your config/params.php file
+To send a get Request pass the endpoint and the data to the `Curl::get` command
 
 ```php
 <?php
 
-...
+use Common\Curl;
 
-	'send_grid' => [
-		'username'    => 'My_SendGrid_Username',
-		'password'    => 'My_SendGrid_Password',
-		'template_id' => 'My_SendGrid_TemplateId',
-		'name'	      => 'My_SendGrid_Name',
-		'key' 	      => 'My_SendGrid_Key'
-	]
+$response = Curl::get(
+  'http://example.com/endpoint'
+  [
+    'name' => 'value',
+    'another_name' => 'another_value'
+  ]
+);
 
-...
+```
+
+The post request (`Curl::post`) works excactly the same way, except for the function name.
+
+
+```php
+<?php
+
+use Common\Curl;
+
+$response = Curl::post(
+  'http://example.com/endpoint'
+  [
+    'name' => 'value',
+    'another_name' => 'another_value'
+  ]
+);
 
 ```
