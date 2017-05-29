@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="CommonPHP" tests="2" assertions="2" failures="0" errors="0" time="0.366674">
-    <testsuite name="Common\Test\CurlTest" file="/Users/Fuzzy/milf/CurlClass/tests/Curl.php" tests="2" assertions="2" failures="0" errors="0" time="0.366674">
-      <testsuite name="Common\Test\CurlTest::test_post" tests="1" assertions="1" failures="0" errors="0" time="0.238247">
-        <testcase name="test_post with data set #0" assertions="1" time="0.238247"/>
+  <testsuite name="CommonPHP" tests="3" assertions="3" failures="0" errors="0" time="0.864393">
+    <testsuite name="Common\Test\CurlTest" file="/Users/Fuzzy/milf/CurlClass/tests/Curl.php" tests="3" assertions="3" failures="0" errors="0" time="0.864393">
+      <testsuite name="Common\Test\CurlTest::test_post" tests="1" assertions="1" failures="0" errors="0" time="0.400156">
+        <testcase name="test_post with data set #0" assertions="1" time="0.400156"/>
       </testsuite>
-      <testsuite name="Common\Test\CurlTest::test_get" tests="1" assertions="1" failures="0" errors="0" time="0.128427">
-        <testcase name="test_get with data set #0" assertions="1" time="0.128427"/>
+      <testsuite name="Common\Test\CurlTest::test_get" tests="1" assertions="1" failures="0" errors="0" time="0.057553">
+        <testcase name="test_get with data set #0" assertions="1" time="0.057553"/>
+      </testsuite>
+      <testsuite name="Common\Test\CurlTest::test_filez" tests="1" assertions="1" failures="0" errors="0" time="0.406684">
+        <testcase name="test_filez with data set #0" assertions="1" time="0.406684"/>
       </testsuite>
     </testsuite>
   </testsuite>

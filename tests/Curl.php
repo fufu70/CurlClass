@@ -70,6 +70,22 @@ class CurlTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Url, file_path, options, and expected response
+     *
+     * @return array Array of arrays matching the test_post parameters
+     */
+    public function input_file() {
+        return [
+            [
+                "http://jsonplaceholder.typicode.com/posts/1",
+                realpath('LICENSE'),
+                [],
+                '{}'
+            ]
+        ];
+    }   
+
+    /**
      *
      *
      *
@@ -103,19 +119,38 @@ class CurlTest extends \PHPUnit_Framework_TestCase
      * Tests the get function in Curl.
      *
      * @dataProvider input_get
-     * 
+     *
      * @param  string     $url               The url to request
      * @param  array|null $get               The get parameters to add.
      * @param  array      $options           The options for the curl call.
      * @param  string     $expected_response The expected response from the request.
      */
     public function test_get(
-        $url = "/", 
-        array $get = NULL, 
-        array $options = [], 
+        $url = "/",
+        array $get = NULL,
+        array $options = [],
         $expected_response = ""
     ) {
         $this->assertEquals($expected_response, Curl::get($url, $get, $options));
+    }
+    
+    /**
+     * Tests the file function in Curl.
+     *
+     * @dataProvider input_file
+     * 
+     * @param  string $url               The url to request
+     * @param  string $file_path         Path to the file to pass.
+     * @param  array  $options           The options for the curl call.
+     * @param  string $expected_response The expected response from the request.
+     */
+    public function test_filez(
+        $url = "/",
+        $file_path = "",
+        array $options = [],
+        $expected_response = ""
+    ) {
+        $this->assertEquals($expected_response, Curl::file($url, $file_path, $options));
     }
 }
 
